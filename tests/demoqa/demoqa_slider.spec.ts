@@ -22,11 +22,11 @@ test.describe('Тестирование слайдера', () => {
     test('Сдвиг влево на 13 шагов', async () => {
         const start: number = await sliderPage.getValue()
 
-        await sliderPage.moveForward(13)
+        await sliderPage.moveBackward(13)
 
         const end: number = await sliderPage.getValue()
 
-        await expect(end).toBe(start + 13)
+        await expect(end).toBe(start - 13)
     })
 
     test('Сдвиг влево на 350 шагов', async () => {
